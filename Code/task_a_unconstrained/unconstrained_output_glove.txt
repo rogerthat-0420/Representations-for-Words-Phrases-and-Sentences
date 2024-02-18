@@ -1,0 +1,1003 @@
++----------------+--------------+-----------+-----------------------+--------------------------+----------------------------+
+|     word1      |    word2     | SimLex999 |        COMPARE        | Similarity_Label_mymodel | Similarity_Label_SimLex999 |
++----------------+--------------+-----------+-----------------------+--------------------------+----------------------------+
+|      old       |     new      |    1.58   |          -1.0         |       not similar        |        not similar         |
+|     smart      | intelligent  |    9.2    |   0.6499999761581421  |         similar          |          similar           |
+|      hard      |  difficult   |    8.77   |          1.0          |         similar          |          similar           |
+|     happy      |   cheerful   |    9.55   |   0.4399999976158142  |         similar          |          similar           |
+|      hard      |     easy     |    0.95   |          -1.0         |       not similar        |        not similar         |
+|      fast      |    rapid     |    8.75   |   0.5099999904632568  |         similar          |          similar           |
+|     happy      |     glad     |    9.17   |          1.0          |         similar          |          similar           |
+|     short      |     long     |    1.23   |          -1.0         |       not similar        |        not similar         |
+|     stupid     |     dumb     |    9.58   |   0.7099999785423279  |         similar          |          similar           |
+|     weird      |   strange    |    8.93   |   0.7200000286102295  |         similar          |          similar           |
+|      wide      |    narrow    |    1.03   |          -1.0         |       not similar        |        not similar         |
+|      bad       |    awful     |    8.42   |   0.5799999833106995  |         similar          |          similar           |
+|      easy      |  difficult   |    0.58   |          -1.0         |       not similar        |        not similar         |
+|      bad       |   terrible   |    7.78   |   0.5600000023841858  |         similar          |          similar           |
+|      hard      |    simple    |    1.38   |   0.3700000047683716  |       not similar        |        not similar         |
+|     smart      |     dumb     |    0.55   |  0.47999998927116394  |         similar          |        not similar         |
+|     insane     |    crazy     |    9.57   |   0.5099999904632568  |         similar          |          similar           |
+|     happy      |     mad      |    0.95   |  0.28999999165534973  |       not similar        |        not similar         |
+|     large      |     huge     |    9.47   |   0.7400000095367432  |         similar          |          similar           |
+|      hard      |    tough     |    8.05   |          1.0          |         similar          |          similar           |
+|      new       |    fresh     |    6.83   |          1.0          |         similar          |          similar           |
+|     sharp      |     dull     |    0.6    |          -1.0         |       not similar        |        not similar         |
+|     quick      |    rapid     |    9.7    |          0.5          |         similar          |          similar           |
+|      dumb      |   foolish    |    6.67   |   0.5400000214576721  |         similar          |          similar           |
+|   wonderful    |   terrific   |    8.63   |          1.0          |         similar          |          similar           |
+|    strange     |     odd      |    9.02   |   0.6899999976158142  |         similar          |          similar           |
+|     happy      |    angry     |    1.28   |   0.3700000047683716  |       not similar        |        not similar         |
+|     narrow     |    broad     |    1.18   |   0.5199999809265137  |         similar          |        not similar         |
+|     simple     |     easy     |    9.4    |   0.6100000143051147  |         similar          |          similar           |
+|      old       |    fresh     |    0.87   |  0.23000000417232513  |       not similar        |        not similar         |
+|    apparent    |   obvious    |    8.47   |   0.6399999856948853  |         similar          |          similar           |
+|  inexpensive   |    cheap     |    8.72   |          1.0          |         similar          |          similar           |
+|      nice      |   generous   |    5.0    |  0.33000001311302185  |       not similar        |          similar           |
+|     weird      |    normal    |    0.72   |   0.2199999988079071  |       not similar        |        not similar         |
+|     weird      |     odd      |    9.2    |   0.6200000047683716  |         similar          |          similar           |
+|      bad       |   immoral    |    7.62   |  0.20999999344348907  |       not similar        |          similar           |
+|      sad       |    funny     |    0.95   |  0.46000000834465027  |         similar          |        not similar         |
+|   wonderful    |    great     |    8.05   |   0.550000011920929   |         similar          |          similar           |
+|     guilty     |   ashamed    |    6.38   |  0.30000001192092896  |       not similar        |          similar           |
+|   beautiful    |  wonderful   |    6.5    |   0.6399999856948853  |         similar          |          similar           |
+|   confident    |     sure     |    8.27   |   0.6000000238418579  |         similar          |          similar           |
+|      dumb      |    dense     |    7.27   |          1.0          |         similar          |          similar           |
+|     large      |     big      |    9.55   |          1.0          |         similar          |          similar           |
+|      nice      |    cruel     |    0.67   |   0.1599999964237213  |       not similar        |        not similar         |
+|   impatient    |   anxious    |    6.03   |   0.6200000047683716  |         similar          |          similar           |
+|      big       |    broad     |    6.73   |  0.27000001072883606  |       not similar        |          similar           |
+|     strong     |    proud     |    3.17   |   0.3100000023841858  |       not similar        |        not similar         |
+|  unnecessary   |  necessary   |    0.63   |          -1.0         |       not similar        |        not similar         |
+|    restless    |    young     |    1.6    |   0.3499999940395355  |       not similar        |        not similar         |
+|      dumb      | intelligent  |    0.75   |   0.3400000035762787  |       not similar        |        not similar         |
+|      bad       |    great     |    0.35   |   0.3499999940395355  |       not similar        |        not similar         |
+|   difficult    |    simple    |    0.87   |   0.4000000059604645  |         similar          |        not similar         |
+|   necessary    |  important   |    7.37   |   0.5099999904632568  |         similar          |          similar           |
+|      bad       |   terrific   |    0.65   |   0.3499999940395355  |       not similar        |        not similar         |
+|      mad       |     glad     |    1.45   |  0.20999999344348907  |       not similar        |        not similar         |
+|     honest     |    guilty    |    1.18   |   0.2199999988079071  |       not similar        |        not similar         |
+|      easy      |    tough     |    0.52   |  0.47999998927116394  |         similar          |        not similar         |
+|      easy      |   flexible   |    4.1    |  0.33000001311302185  |       not similar        |        not similar         |
+|    certain     |     sure     |    8.42   |          1.0          |         similar          |          similar           |
+|   essential    |  necessary   |    8.97   |          1.0          |         similar          |          similar           |
+|   different    |    normal    |    1.08   |   0.4099999964237213  |         similar          |        not similar         |
+|      sly       |    clever    |    7.25   |   0.4699999988079071  |         similar          |          similar           |
+|    crucial     |  important   |    8.82   |          1.0          |         similar          |          similar           |
+|     harsh      |    cruel     |    8.18   |  0.49000000953674316  |         similar          |          similar           |
+|    childish    |   foolish    |    5.5    |  0.49000000953674316  |         similar          |          similar           |
+|     scarce     |     rare     |    9.17   |  0.28999999165534973  |       not similar        |          similar           |
+|    friendly    |   generous   |    5.9    |  0.28999999165534973  |       not similar        |          similar           |
+|    fragile     |    frigid    |    2.38   |  0.12999999523162842  |       not similar        |        not similar         |
+|      long      |    narrow    |    3.57   |  0.36000001430511475  |       not similar        |        not similar         |
+|      big       |    heavy     |    6.18   |          1.0          |         similar          |          similar           |
+|     rough      |    frigid    |    2.47   |   0.2800000011920929  |       not similar        |        not similar         |
+|    bizarre     |   strange    |    9.37   |   0.6899999976158142  |         similar          |          similar           |
+|    illegal     |   immoral    |    4.28   |   0.4300000071525574  |         similar          |        not similar         |
+|      bad       |    guilty    |    4.2    |  0.20999999344348907  |       not similar        |        not similar         |
+|     modern     |   ancient    |    0.73   |   0.5199999809265137  |         similar          |        not similar         |
+|      new       |   ancient    |    0.23   |  0.18000000715255737  |       not similar        |        not similar         |
+|      dull      |    funny     |    0.55   |   0.3100000023841858  |       not similar        |        not similar         |
+|     happy      |    young     |    2.0    |   0.3799999952316284  |       not similar        |        not similar         |
+|      easy      |     big      |    1.12   |  0.44999998807907104  |         similar          |        not similar         |
+|     great      |    awful     |    1.17   |   0.3199999928474426  |       not similar        |        not similar         |
+|      tiny      |     huge     |    0.6    |   0.3700000047683716  |       not similar        |        not similar         |
+|     polite     |    proper    |    7.63   |          0.25         |       not similar        |          similar           |
+|     modest     |   ashamed    |    2.65   | -0.029999999329447746 |       not similar        |        not similar         |
+|     exotic     |     rare     |    8.05   |   0.3700000047683716  |       not similar        |          similar           |
+|      dumb      |    clever    |    1.17   |   0.4399999976158142  |         similar          |        not similar         |
+|   delightful   |  wonderful   |    8.65   |   0.6299999952316284  |         similar          |          similar           |
+|   noticeable   |   obvious    |    8.48   |  0.47999998927116394  |         similar          |          similar           |
+|     afraid     |   anxious    |    5.07   |   0.5400000214576721  |         similar          |          similar           |
+|     formal     |    proper    |    8.02   |  0.47999998927116394  |         similar          |          similar           |
+|     dreary     |     dull     |    8.25   |   0.5199999809265137  |         similar          |          similar           |
+|   delightful   |   cheerful   |    6.58   |  0.38999998569488525  |       not similar        |          similar           |
+|    unhappy     |     mad      |    5.95   |  0.14000000059604645  |       not similar        |          similar           |
+|      sad       |   terrible   |    5.4    |   0.5099999904632568  |         similar          |          similar           |
+|      sick      |    crazy     |    3.57   |          1.0          |         similar          |        not similar         |
+|    violent     |    angry     |    6.98   |  0.44999998807907104  |         similar          |          similar           |
+|     laden      |    heavy     |    5.9    |  0.20999999344348907  |       not similar        |          similar           |
+|     dirty      |    cheap     |    1.6    |   0.4300000071525574  |         similar          |        not similar         |
+|    elastic     |   flexible   |    7.78   |          1.0          |         similar          |          similar           |
+|      hard      |    dense     |    5.9    |   0.1899999976158142  |       not similar        |          similar           |
+|     recent     |     new      |    7.05   |  0.44999998807907104  |         similar          |          similar           |
+|      bold      |    proud     |    3.97   |  0.25999999046325684  |       not similar        |        not similar         |
+|      sly       |   strange    |    1.97   |   0.1899999976158142  |       not similar        |        not similar         |
+|    strange     |     sly      |    2.07   |   0.1899999976158142  |       not similar        |        not similar         |
+|      dumb      |     rare     |    0.48   |  0.029999999329447746 |       not similar        |        not similar         |
+|      sly       |    tough     |    0.58   |  0.10000000149011612  |       not similar        |        not similar         |
+|    terrific    |     mad      |    0.4    |  0.15000000596046448  |       not similar        |        not similar         |
+|     modest     |   flexible   |    0.98   |  0.17000000178813934  |       not similar        |        not similar         |
+|     fresh      |     wide     |    0.4    |   0.2199999988079071  |       not similar        |        not similar         |
+|      huge      |     dumb     |    0.48   |  0.05999999865889549  |       not similar        |        not similar         |
+|     large      |   flexible   |    0.48   |          0.25         |       not similar        |        not similar         |
+|     dirty      |    narrow    |    0.3    |  0.14000000059604645  |       not similar        |        not similar         |
+|      wife      |   husband    |    2.3    |          -1.0         |       not similar        |        not similar         |
+|      book      |     text     |    6.35   |   0.4300000071525574  |         similar          |          similar           |
+|     groom      |    bride     |    3.17   |   0.699999988079071   |         similar          |        not similar         |
+|     night      |     day      |    1.88   |          -1.0         |       not similar        |        not similar         |
+|     south      |    north     |    2.2    |          -1.0         |       not similar        |        not similar         |
+|     plane      |   airport    |    3.65   |   0.5299999713897705  |         similar          |        not similar         |
+|     uncle      |     aunt     |    5.5    |          -1.0         |       not similar        |          similar           |
+|     horse      |     mare     |    8.33   |   0.3499999940395355  |       not similar        |          similar           |
+|     bottom     |     top      |    0.7    |          -1.0         |       not similar        |        not similar         |
+|     friend     |    buddy     |    8.78   |   0.4699999988079071  |         similar          |          similar           |
+|    student     |    pupil     |    9.35   |          1.0          |         similar          |          similar           |
+|     world      |    globe     |    6.67   |          1.0          |         similar          |          similar           |
+|      leg       |     arm      |    2.88   |          0.5          |         similar          |        not similar         |
+|     plane      |     jet      |    8.1    |   0.7099999785423279  |         similar          |          similar           |
+|     woman      |     man      |    3.33   |          -1.0         |       not similar        |        not similar         |
+|     horse      |     colt     |    7.07   |   0.4699999988079071  |         similar          |          similar           |
+|    actress     |    actor     |    7.12   |   0.7300000190734863  |         similar          |          similar           |
+|    teacher     |  instructor  |    9.25   |          1.0          |         similar          |          similar           |
+|     movie      |     film     |    8.87   |          1.0          |         similar          |          similar           |
+|      bird      |     hawk     |    7.85   |  0.27000001072883606  |       not similar        |          similar           |
+|      word      |  dictionary  |    3.68   |   0.4300000071525574  |         similar          |        not similar         |
+|     money      |    salary    |    7.88   |   0.4099999964237213  |         similar          |          similar           |
+|      dog       |     cat      |    1.75   |   0.6800000071525574  |         similar          |        not similar         |
+|      area      |    region    |    9.47   |          1.0          |         similar          |          similar           |
+|      navy      |     army     |    6.43   |   0.5099999904632568  |         similar          |          similar           |
+|      book      |  literature  |    7.53   |   0.5199999809265137  |         similar          |          similar           |
+|    clothes     |    closet    |    3.27   |   0.4099999964237213  |         similar          |        not similar         |
+|     sunset     |   sunrise    |    2.47   |          -1.0         |       not similar        |        not similar         |
+|     child      |    adult     |    2.98   |   0.5199999809265137  |         similar          |        not similar         |
+|      cow       |    cattle    |    9.52   |   0.6200000047683716  |         similar          |          similar           |
+|      book      |    story     |    5.63   |   0.5699999928474426  |         similar          |          similar           |
+|     winter     |    summer    |    2.38   |   0.7900000214576721  |         similar          |        not similar         |
+|      taxi      |     cab      |    9.2    |          1.0          |         similar          |          similar           |
+|      tree      |    maple     |    5.53   |   0.4399999976158142  |         similar          |          similar           |
+|      bed       |   bedroom    |    3.4    |   0.5799999833106995  |         similar          |        not similar         |
+|      roof      |   ceiling    |    7.58   |          1.0          |         similar          |          similar           |
+|    disease     |  infection   |    7.15   |   0.7099999785423279  |         similar          |          similar           |
+|      arm       |   shoulder   |    4.85   |   0.5400000214576721  |         similar          |        not similar         |
+|     sheep      |     lamb     |    8.42   |  0.38999998569488525  |       not similar        |          similar           |
+|      lady      |  gentleman   |    3.42   |   0.3400000035762787  |       not similar        |        not similar         |
+|      boat      |    anchor    |    2.25   |   0.2199999988079071  |       not similar        |        not similar         |
+|     priest     |     monk     |    6.28   |  0.49000000953674316  |         similar          |          similar           |
+|      toe       |    finger    |    4.68   |  0.49000000953674316  |         similar          |        not similar         |
+|     river      |    stream    |    7.3    |   0.5199999809265137  |         similar          |          similar           |
+|     anger      |     fury     |    8.73   |   0.6000000238418579  |         similar          |          similar           |
+|      date      |   calendar   |    4.42   |   0.4399999976158142  |         similar          |        not similar         |
+|      sea       |    ocean     |    8.27   |          1.0          |         similar          |          similar           |
+|     second     |    minute    |    4.62   |          1.0          |         similar          |        not similar         |
+|      hand      |    thumb     |    3.88   |   0.4699999988079071  |         similar          |        not similar         |
+|      wood      |     log      |    7.3    |   0.3499999940395355  |       not similar        |          similar           |
+|      mud       |     dirt     |    7.32   |   0.5600000023841858  |         similar          |          similar           |
+|    hallway     |   corridor   |    9.28   |  0.38999998569488525  |       not similar        |          similar           |
+|      way       |    manner    |    7.62   |          1.0          |         similar          |          similar           |
+|     mouse      |     cat      |    1.12   |  0.44999998807907104  |         similar          |        not similar         |
+|      cop       |   sheriff    |    9.05   |   0.3199999928474426  |       not similar        |          similar           |
+|     death      |    burial    |    4.93   |  0.33000001311302185  |       not similar        |        not similar         |
+|     music      |    melody    |    6.98   |  0.46000000834465027  |         similar          |          similar           |
+|      beer      |   alcohol    |    7.5    |  0.44999998807907104  |         similar          |          similar           |
+|     mouth      |     lip      |    7.1    |          1.0          |         similar          |          similar           |
+|     storm      |  hurricane   |    6.38   |   0.8199999928474426  |         similar          |          similar           |
+|      tax       |    income    |    2.38   |   0.6800000071525574  |         similar          |        not similar         |
+|     flower     |    violet    |    6.95   |  0.28999999165534973  |       not similar        |          similar           |
+|     paper      |  cardboard   |    5.38   |  0.47999998927116394  |         similar          |          similar           |
+|     floor      |   ceiling    |    1.73   |   0.5400000214576721  |         similar          |        not similar         |
+|     beach      |   seashore   |    8.33   |   0.3100000023841858  |       not similar        |          similar           |
+|      rod       |   curtain    |    3.03   |  0.25999999046325684  |       not similar        |        not similar         |
+|     hound      |     fox      |    2.38   |   0.1899999976158142  |       not similar        |        not similar         |
+|     street     |    alley     |    5.48   |   0.3700000047683716  |       not similar        |          similar           |
+|      boat      |     deck     |    4.28   |   0.3700000047683716  |       not similar        |        not similar         |
+|      car       |     horn     |    2.57   |  0.18000000715255737  |       not similar        |        not similar         |
+|     friend     |    guest     |    4.25   |  0.30000001192092896  |       not similar        |        not similar         |
+|    employer    |   employee   |    3.65   |          -1.0         |       not similar        |        not similar         |
+|      hand      |    wrist     |    3.97   |   0.4399999976158142  |         similar          |        not similar         |
+|      ball      |    cannon    |    2.58   |  0.23000000417232513  |       not similar        |        not similar         |
+|    alcohol     |    brandy    |    6.98   |  0.27000001072883606  |       not similar        |          similar           |
+|    victory     |   triumph    |    8.98   |          1.0          |         similar          |          similar           |
+|   telephone    |    booth     |    3.63   |   0.3199999928474426  |       not similar        |        not similar         |
+|      door      |   doorway    |    5.4    |          1.0          |         similar          |          similar           |
+|     motel      |     inn      |    8.17   |   0.5799999833106995  |         similar          |          similar           |
+|    clothes     |    cloth     |    5.47   |  0.47999998927116394  |         similar          |          similar           |
+|     steak      |     meat     |    7.47   |  0.47999998927116394  |         similar          |          similar           |
+|      nail      |    thumb     |    3.55   |          0.25         |       not similar        |        not similar         |
+|      band      |  orchestra   |    7.08   |  0.44999998807907104  |         similar          |          similar           |
+|      book      |    bible     |    5.0    |   0.5199999809265137  |         similar          |          similar           |
+|    business    |   industry   |    7.02   |   0.6700000166893005  |         similar          |          similar           |
+|     winter     |    season    |    6.27   |   0.5199999809265137  |         similar          |          similar           |
+|     decade     |   century    |    3.48   |  0.47999998927116394  |         similar          |        not similar         |
+|    alcohol     |     gin      |    8.65   |  0.23999999463558197  |       not similar        |          similar           |
+|      hat       |     coat     |    2.67   |  0.47999998927116394  |         similar          |        not similar         |
+|     window     |     door     |    3.33   |   0.6700000166893005  |         similar          |        not similar         |
+|      arm       |    wrist     |    3.57   |   0.5400000214576721  |         similar          |        not similar         |
+|     house      |  apartment   |    5.8    |  0.41999998688697815  |         similar          |          similar           |
+|     glass      |   crystal    |    6.27   |  0.46000000834465027  |         similar          |          similar           |
+|      wine      |    brandy    |    5.15   |   0.4000000059604645  |         similar          |          similar           |
+|    creator     |    maker     |    9.62   |   0.1899999976158142  |       not similar        |          similar           |
+|     dinner     |  breakfast   |    3.33   |   0.7200000286102295  |         similar          |        not similar         |
+|      arm       |    muscle    |    3.72   |   0.3700000047683716  |       not similar        |        not similar         |
+|     bubble     |     suds     |    8.57   |  0.17000000178813934  |       not similar        |          similar           |
+|     bread      |    flour     |    3.33   |   0.6299999952316284  |         similar          |        not similar         |
+|     death      |   tragedy    |    5.8    |  0.41999998688697815  |         similar          |          similar           |
+|    absence     |   presence   |    0.4    |          -1.0         |       not similar        |        not similar         |
+|      gun       |    cannon    |    5.68   |   0.5099999904632568  |         similar          |          similar           |
+|     grass      |    blade     |    4.57   |   0.2800000011920929  |       not similar        |        not similar         |
+|      ball      |    basket    |    1.67   |  0.41999998688697815  |         similar          |        not similar         |
+|      hose      |    garden    |    1.67   |  0.25999999046325684  |       not similar        |        not similar         |
+|      boy       |     kid      |    7.5    |   0.6600000262260437  |         similar          |          similar           |
+|     church     |    choir     |    2.95   |   0.4699999988079071  |         similar          |        not similar         |
+|    clothes     |    drawer    |    3.02   |   0.2800000011920929  |       not similar        |        not similar         |
+|     tower      |     bell     |    1.9    |  0.41999998688697815  |         similar          |        not similar         |
+|     father     |    parent    |    7.07   |   0.3100000023841858  |       not similar        |          similar           |
+|     school     |    grade     |    4.42   |   0.5299999713897705  |         similar          |        not similar         |
+|     parent     |    adult     |    5.37   |  0.38999998569488525  |       not similar        |          similar           |
+|      bar       |     jail     |    1.9    |   0.1899999976158142  |       not similar        |        not similar         |
+|      car       |   highway    |    3.4    |  0.36000001430511475  |       not similar        |        not similar         |
+|   dictionary   |  definition  |    6.25   |  0.36000001430511475  |       not similar        |          similar           |
+|      door      |    cellar    |    1.97   |  0.36000001430511475  |       not similar        |        not similar         |
+|      army      |    legion    |    5.95   |   0.3400000035762787  |       not similar        |          similar           |
+|     metal      |   aluminum   |    7.25   |   0.550000011920929   |         similar          |          similar           |
+|     chair      |    bench     |    6.67   |   0.3700000047683716  |       not similar        |          similar           |
+|     cloud      |     fog      |    6.0    |          1.0          |         similar          |          similar           |
+|      boy       |     son      |    6.75   |          1.0          |         similar          |          similar           |
+|     water      |     ice      |    6.47   |   0.4000000059604645  |         similar          |          similar           |
+|      bed       |   blanket    |    3.02   |   0.3799999952316284  |       not similar        |        not similar         |
+|    attorney    |    lawyer    |    9.35   |          1.0          |         similar          |          similar           |
+|      area      |     zone     |    8.33   |   0.5199999809265137  |         similar          |          similar           |
+|    business    |   company    |    9.02   |   0.5899999737739563  |         similar          |          similar           |
+|    clothes     |    fabric    |    5.87   |  0.44999998807907104  |         similar          |          similar           |
+|    sweater     |    jacket    |    7.15   |   0.6499999761581421  |         similar          |          similar           |
+|     money      |   capital    |    6.67   |   0.3700000047683716  |       not similar        |          similar           |
+|      hand      |     foot     |    4.17   |  0.41999998688697815  |         similar          |        not similar         |
+|    alcohol     |   cocktail   |    6.73   |  0.30000001192092896  |       not similar        |          similar           |
+|      yard      |     inch     |    3.78   |  0.23999999463558197  |       not similar        |        not similar         |
+|    molecule    |     atom     |    6.45   |          1.0          |         similar          |          similar           |
+|      lens      |    camera    |    4.28   |  0.46000000834465027  |         similar          |        not similar         |
+|      meal      |    dinner    |    7.15   |   0.6399999856948853  |         similar          |          similar           |
+|      eye       |     tear     |    3.55   |          0.25         |       not similar        |        not similar         |
+|      god       |    devil     |    1.8    |  0.38999998569488525  |       not similar        |        not similar         |
+|      loop      |     belt     |    3.1    |  0.27000001072883606  |       not similar        |        not similar         |
+|      rat       |    mouse     |    7.78   |   0.5299999713897705  |         similar          |          similar           |
+|     motor      |    engine    |    8.65   |  0.44999998807907104  |         similar          |          similar           |
+|      car       |     cab      |    7.42   |  0.46000000834465027  |         similar          |          similar           |
+|      cat       |     lion     |    6.75   |   0.3799999952316284  |       not similar        |          similar           |
+|      size      |  magnitude   |    6.33   |  0.30000001192092896  |       not similar        |          similar           |
+|    reality     |   fantasy    |    1.03   |  0.41999998688697815  |         similar          |        not similar         |
+|      door      |     gate     |    5.25   |   0.4000000059604645  |         similar          |          similar           |
+|      cat       |     pet      |    5.95   |   0.5899999737739563  |         similar          |          similar           |
+|      tin       |   aluminum   |    6.42   |   0.4300000071525574  |         similar          |          similar           |
+|      bone      |     jaw      |    4.17   |   0.5099999904632568  |         similar          |        not similar         |
+|     cereal     |    wheat     |    3.75   |   0.5199999809265137  |         similar          |        not similar         |
+|     house      |     key      |    1.9    |  0.28999999165534973  |       not similar        |        not similar         |
+|     blood      |    flesh     |    4.28   |   0.4099999964237213  |         similar          |        not similar         |
+|      door      |   corridor   |    3.73   |   0.1599999964237213  |       not similar        |        not similar         |
+|      god       |    spirit    |    7.3    |   0.4699999988079071  |         similar          |          similar           |
+|   capability   |  competence  |    7.62   |   0.3799999952316284  |       not similar        |          similar           |
+|   abundance    |    plenty    |    8.97   |  0.38999998569488525  |       not similar        |          similar           |
+|      sofa      |    chair     |    6.67   |   0.4099999964237213  |         similar          |          similar           |
+|      wall      |    brick     |    4.68   |   0.4099999964237213  |         similar          |        not similar         |
+|      horn      |     drum     |    2.68   |  0.28999999165534973  |       not similar        |        not similar         |
+|     organ      |    liver     |    6.15   |   0.4300000071525574  |         similar          |          similar           |
+|    strength    |    might     |    7.07   |   0.3100000023841858  |       not similar        |          similar           |
+|     phrase     |     word     |    5.48   |          1.0          |         similar          |          similar           |
+|      band      |    parade    |    3.92   |  0.23000000417232513  |       not similar        |        not similar         |
+|    stomach     |    waist     |    5.9    |  0.28999999165534973  |       not similar        |          similar           |
+|     cloud      |    storm     |    5.6    |   0.3499999940395355  |       not similar        |          similar           |
+|      joy       |    pride     |    5.0    |   0.4699999988079071  |         similar          |          similar           |
+|     noise      |    rattle    |    6.17   |  0.20000000298023224  |       not similar        |          similar           |
+|      rain      |     mist     |    5.97   |  0.38999998569488525  |       not similar        |          similar           |
+|      beer      |   beverage   |    5.42   |   0.5699999928474426  |         similar          |          similar           |
+|      man       |    uncle     |    3.92   |   0.4000000059604645  |         similar          |        not similar         |
+|     apple      |    juice     |    2.88   |   0.4399999976158142  |         similar          |        not similar         |
+|  intelligence  |    logic     |    6.5    |  0.18000000715255737  |       not similar        |          similar           |
+| communication  |   language   |    7.47   |   0.3700000047683716  |       not similar        |          similar           |
+|      mink      |     fur      |    6.83   |   0.5400000214576721  |         similar          |          similar           |
+|      mob       |    crowd     |    7.85   |  0.36000001430511475  |       not similar        |          similar           |
+|     shore      |    coast     |    8.83   |   0.5099999904632568  |         similar          |          similar           |
+|      wire      |     cord     |    7.62   |   0.3199999928474426  |       not similar        |          similar           |
+|      bird      |    turkey    |    6.58   |  0.30000001192092896  |       not similar        |          similar           |
+|      bed       |     crib     |    7.3    |  0.38999998569488525  |       not similar        |          similar           |
+|   competence   |   ability    |    7.5    |   0.4399999976158142  |         similar          |          similar           |
+|     cloud      |     haze     |    7.32   |   0.4399999976158142  |         similar          |          similar           |
+|     supper     |     meal     |    7.53   |   0.4699999988079071  |         similar          |          similar           |
+|      bar       |     cage     |    2.8    |  0.15000000596046448  |       not similar        |        not similar         |
+|     water      |     salt     |    1.3    |   0.4699999988079071  |         similar          |        not similar         |
+|     sense      |  intuition   |    7.68   |   0.4000000059604645  |         similar          |          similar           |
+|   situation    |  condition   |    6.58   |  0.49000000953674316  |         similar          |          similar           |
+|     crime      |    theft     |    7.53   |   0.4699999988079071  |         similar          |          similar           |
+|     style      |   fashion    |    8.5    |          1.0          |         similar          |          similar           |
+|    boundary    |    border    |    9.08   |   0.4699999988079071  |         similar          |          similar           |
+|      arm       |     body     |    4.05   |  0.38999998569488525  |       not similar        |        not similar         |
+|      boat      |     car      |    2.37   |  0.38999998569488525  |       not similar        |        not similar         |
+|    sandwich    |    lunch     |    6.3    |   0.4399999976158142  |         similar          |          similar           |
+|     bride      |   princess   |    2.8    |  0.46000000834465027  |         similar          |        not similar         |
+|    heroine     |     hero     |    8.78   |   0.5199999809265137  |         similar          |          similar           |
+|      car       |    gauge     |    1.13   |   0.1599999964237213  |       not similar        |        not similar         |
+|     insect     |     bee      |    6.07   |   0.3199999928474426  |       not similar        |          similar           |
+|      crib      |    cradle    |    8.55   |  0.27000001072883606  |       not similar        |          similar           |
+|     animal     |    person    |    3.05   |   0.2800000011920929  |       not similar        |        not similar         |
+|   marijuana    |     herb     |    6.5    |  0.27000001072883606  |       not similar        |          similar           |
+|      bed       |   hospital   |    0.92   |   0.3799999952316284  |       not similar        |        not similar         |
+|     cheek      |    tongue    |    4.52   |   0.5799999833106995  |         similar          |        not similar         |
+|      disc      |   computer   |    3.2    |          0.25         |       not similar        |        not similar         |
+|     curve      |    angle     |    3.33   |  0.47999998927116394  |         similar          |        not similar         |
+|     grass      |     moss     |    5.0    |   0.3499999940395355  |       not similar        |          similar           |
+|     school     |     law      |    1.13   |   0.3700000047683716  |       not similar        |        not similar         |
+|      foot      |     head     |    2.3    |          -1.0         |       not similar        |        not similar         |
+|     mother     |   guardian   |    6.5    |          0.25         |       not similar        |          similar           |
+|  orthodontist  |   dentist    |    8.27   |   0.5400000214576721  |         similar          |          similar           |
+|    alcohol     |   whiskey    |    7.27   |   0.4000000059604645  |         similar          |          similar           |
+|     mouth      |    tooth     |    6.3    |   0.3199999928474426  |       not similar        |          similar           |
+|   breakfast    |    bacon     |    4.37   |   0.3700000047683716  |       not similar        |        not similar         |
+|    bathroom    |   bedroom    |    3.4    |   0.6499999761581421  |         similar          |        not similar         |
+|     plate      |     bowl     |    5.23   |  0.28999999165534973  |       not similar        |          similar           |
+|      meat      |    bacon     |    5.8    |   0.4000000059604645  |         similar          |          similar           |
+|      air       |    helium    |    3.63   |   0.2199999988079071  |       not similar        |        not similar         |
+|     worker     |   employer   |    5.37   |   0.5199999809265137  |         similar          |          similar           |
+|      body      |    chest     |    4.45   |   0.4300000071525574  |         similar          |        not similar         |
+|      son       |    father    |    3.82   |   0.8600000143051147  |         similar          |        not similar         |
+|     heart      |   surgery    |    1.08   |   0.550000011920929   |         similar          |        not similar         |
+|     woman      |  secretary   |    1.98   |  0.14000000059604645  |       not similar        |        not similar         |
+|      man       |    father    |    4.83   |   0.550000011920929   |         similar          |        not similar         |
+|     beach      |    island    |    5.6    |   0.4399999976158142  |         similar          |          similar           |
+|     story      |    topic     |    5.0    |  0.27000001072883606  |       not similar        |          similar           |
+|      game      |     fun      |    3.42   |   0.4099999964237213  |         similar          |        not similar         |
+|    weekend     |     week     |    4.0    |   0.7599999904632568  |         similar          |        not similar         |
+|     couple     |     pair     |    8.33   |          1.0          |         similar          |          similar           |
+|     woman      |     wife     |    5.72   |   0.6000000238418579  |         similar          |          similar           |
+|     sheep      |    cattle    |    4.77   |          0.75         |         similar          |        not similar         |
+|     purse      |     bag      |    8.33   |          1.0          |         similar          |          similar           |
+|    ceiling     |  cathedral   |    2.42   |  0.28999999165534973  |       not similar        |        not similar         |
+|      bean      |    coffee    |    5.15   |   0.4099999964237213  |         similar          |          similar           |
+|      wood      |    paper     |    2.88   |  0.36000001430511475  |       not similar        |        not similar         |
+|      top       |     side     |    1.9    |          -1.0         |       not similar        |        not similar         |
+|     crime      |    fraud     |    5.65   |   0.4099999964237213  |         similar          |          similar           |
+|      pain      |     harm     |    5.38   |   0.3400000035762787  |       not similar        |          similar           |
+|     lover      |  companion   |    5.97   |   0.5299999713897705  |         similar          |          similar           |
+|    evening     |     dusk     |    7.78   |   0.3700000047683716  |       not similar        |          similar           |
+|     father     |   daughter   |    2.62   |   0.7300000190734863  |         similar          |        not similar         |
+|      wine      |    liquor    |    7.85   |   0.4300000071525574  |         similar          |          similar           |
+|      cow       |     goat     |    2.93   |   0.5600000023841858  |         similar          |        not similar         |
+|     belief     |   opinion    |    7.7    |          1.0          |         similar          |          similar           |
+|    reality     |   illusion   |    1.42   |  0.41999998688697815  |         similar          |        not similar         |
+|      pact      |  agreement   |    9.02   |   0.7699999809265137  |         similar          |          similar           |
+|     wealth     |   poverty    |    1.27   |          -1.0         |       not similar        |        not similar         |
+|    accident    |  emergency   |    4.93   |   0.3400000035762787  |       not similar        |        not similar         |
+|     battle     |   conquest   |    7.22   |  0.30000001192092896  |       not similar        |          similar           |
+|     friend     |   teacher    |    2.62   |   0.4399999976158142  |         similar          |        not similar         |
+|    illness     |  infection   |    6.9    |   0.5899999737739563  |         similar          |          similar           |
+|      game      |    trick     |    2.32   |   0.3700000047683716  |       not similar        |        not similar         |
+|    brother     |     son      |    3.48   |   0.8299999833106995  |         similar          |        not similar         |
+|      aunt      |    nephew    |    3.1    |  0.49000000953674316  |         similar          |        not similar         |
+|     worker     |   mechanic   |    4.92   |  0.44999998807907104  |         similar          |        not similar         |
+|     doctor     | orthodontist |    5.58   |  0.20999999344348907  |       not similar        |          similar           |
+|      oak       |    maple     |    6.03   |   0.5099999904632568  |         similar          |          similar           |
+|      bee       |    queen     |    3.27   |  0.23000000417232513  |       not similar        |        not similar         |
+|      car       |   bicycle    |    3.47   |          0.5          |         similar          |        not similar         |
+|      goal      |    quest     |    5.83   |          0.25         |       not similar        |          similar           |
+|     august     |    month     |    5.53   |   0.5899999737739563  |         similar          |          similar           |
+|      army      |    squad     |    5.08   |  0.33000001311302185  |       not similar        |          similar           |
+|     cloud      |   weather    |    4.87   |   0.3199999928474426  |       not similar        |        not similar         |
+|   physician    |    doctor    |    8.88   |          1.0          |         similar          |          similar           |
+|     canyon     |    valley    |    6.75   |          0.5          |         similar          |          similar           |
+|     river      |    valley    |    1.67   |   0.6000000238418579  |         similar          |        not similar         |
+|      sun       |     sky      |    2.27   |   0.4399999976158142  |         similar          |        not similar         |
+|     target     |    arrow     |    3.25   |  0.20999999344348907  |       not similar        |        not similar         |
+|   chocolate    |     pie      |    2.27   |          0.5          |         similar          |        not similar         |
+|  circumstance  |  situation   |    7.85   |   0.3799999952316284  |       not similar        |          similar           |
+|    opinion     |    choice    |    5.43   |  0.33000001311302185  |       not similar        |          similar           |
+|     rhythm     |    melody    |    6.12   |   0.550000011920929   |         similar          |          similar           |
+|      gut       |    nerve     |    4.93   |  0.28999999165534973  |       not similar        |        not similar         |
+|      day       |     dawn     |    5.47   |  0.38999998569488525  |       not similar        |          similar           |
+|     cattle     |     beef     |    7.03   |   0.5400000214576721  |         similar          |          similar           |
+|     doctor     |  professor   |    4.65   |  0.41999998688697815  |         similar          |        not similar         |
+|      arm       |     vein     |    3.65   |  0.20000000298023224  |       not similar        |        not similar         |
+|      room      |     bath     |    3.33   |   0.3499999940395355  |       not similar        |        not similar         |
+|  corporation   |   business   |    9.02   |   0.3799999952316284  |       not similar        |          similar           |
+|      fun       |   football   |    1.97   |  0.20999999344348907  |       not similar        |        not similar         |
+|      hill      |    cliff     |    4.28   |   0.4099999964237213  |         similar          |        not similar         |
+|      bone      |    ankle     |    3.82   |  0.41999998688697815  |         similar          |        not similar         |
+|     apple      |    candy     |    2.08   |   0.3400000035762787  |       not similar        |        not similar         |
+|     helper     |     maid     |    5.58   |   0.2800000011920929  |       not similar        |          similar           |
+|     leader     |   manager    |    7.27   |  0.18000000715255737  |       not similar        |          similar           |
+|     lemon      |     tea      |    1.6    |   0.3100000023841858  |       not similar        |        not similar         |
+|      bee       |     ant      |    2.78   |  0.36000001430511475  |       not similar        |        not similar         |
+|   basketball   |   baseball   |    4.92   |   0.6700000166893005  |         similar          |        not similar         |
+|      rice      |     bean     |    2.72   |  0.36000001430511475  |       not similar        |        not similar         |
+|      bed       |  furniture   |    6.08   |   0.3199999928474426  |       not similar        |          similar           |
+|    emotion     |   passion    |    7.72   |   0.550000011920929   |         similar          |          similar           |
+|    anarchy     |    chaos     |    7.93   |   0.699999988079071   |         similar          |          similar           |
+|     crime      |  violation   |    7.12   |          0.25         |       not similar        |          similar           |
+|    machine     |    engine    |    5.58   |   0.3400000035762787  |       not similar        |          similar           |
+|     beach      |     sea      |    4.68   |  0.33000001311302185  |       not similar        |        not similar         |
+|     alley      |     bowl     |    1.53   |  0.11999999731779099  |       not similar        |        not similar         |
+|      jar       |    bottle    |    7.83   |  0.47999998927116394  |         similar          |          similar           |
+|    strength    |  capability  |    5.28   |   0.4399999976158142  |         similar          |          similar           |
+|      seed      |   mustard    |    3.48   |   0.2199999988079071  |       not similar        |        not similar         |
+|     guitar     |     drum     |    3.78   |          0.5          |         similar          |        not similar         |
+|    opinion     |     idea     |    5.7    |   0.3100000023841858  |       not similar        |          similar           |
+|     north      |     west     |    3.63   |   0.6399999856948853  |         similar          |        not similar         |
+|      diet      |    salad     |    2.98   |  0.27000001072883606  |       not similar        |        not similar         |
+|     mother     |     wife     |    3.02   |   0.8100000023841858  |         similar          |        not similar         |
+|      dad       |    mother    |    3.55   |   0.550000011920929   |         similar          |        not similar         |
+|    captain     |    sailor    |    5.0    |   0.3700000047683716  |       not similar        |          similar           |
+|     meter      |     yard     |    5.6    |   0.3799999952316284  |       not similar        |          similar           |
+|      beer      |  champagne   |    4.45   |  0.47999998927116394  |         similar          |        not similar         |
+|     motor      |     boat     |    2.57   |   0.3199999928474426  |       not similar        |        not similar         |
+|      card      |    bridge    |    1.97   |  0.10999999940395355  |       not similar        |        not similar         |
+|    science     |  psychology  |    4.92   |   0.5699999928474426  |         similar          |        not similar         |
+|     sinner     |    saint     |    1.6    |   0.3199999928474426  |       not similar        |        not similar         |
+|  destruction   | construction |    0.98   |  0.25999999046325684  |       not similar        |        not similar         |
+|     crowd      |    bunch     |    7.42   |          1.0          |         similar          |          similar           |
+|     beach      |     reef     |    3.77   |  0.27000001072883606  |       not similar        |        not similar         |
+|      man       |    child     |    4.13   |   0.3700000047683716  |       not similar        |        not similar         |
+|     bread      |    cheese    |    1.95   |   0.6200000047683716  |         similar          |        not similar         |
+|    champion    |    winner    |    8.73   |   0.6399999856948853  |         similar          |          similar           |
+|  celebration   |   ceremony   |    7.72   |   0.6100000143051147  |         similar          |          similar           |
+|      menu      |    order     |    3.62   |  0.20000000298023224  |       not similar        |        not similar         |
+|      king      |   princess   |    3.27   |   0.4399999976158142  |         similar          |        not similar         |
+|     wealth     |   prestige   |    6.07   |   0.3700000047683716  |       not similar        |          similar           |
+|   endurance    |   strength   |    6.58   |   0.4000000059604645  |         similar          |          similar           |
+|     danger     |    threat    |    8.78   |   0.7300000190734863  |         similar          |          similar           |
+|      god       |    priest    |    4.5    |   0.3499999940395355  |       not similar        |        not similar         |
+|      men       |  fraternity  |    3.13   |  0.20000000298023224  |       not similar        |        not similar         |
+|     buddy      |  companion   |    8.65   |   0.2199999988079071  |       not similar        |          similar           |
+|    teacher     |    helper    |    4.28   |  0.20000000298023224  |       not similar        |        not similar         |
+|      body      |   stomach    |    3.93   |   0.3499999940395355  |       not similar        |        not similar         |
+|     tongue     |    throat    |    3.1    |   0.4699999988079071  |         similar          |        not similar         |
+|     house      |    carpet    |    1.38   |   0.1599999964237213  |       not similar        |        not similar         |
+|  intelligence  |    skill     |    5.35   |  0.28999999165534973  |       not similar        |          similar           |
+|    journey     |   conquest   |    4.72   |   0.2800000011920929  |       not similar        |        not similar         |
+|      god       |     prey     |    1.23   |  0.05999999865889549  |       not similar        |        not similar         |
+|    brother     |     soul     |    0.97   |          0.25         |       not similar        |        not similar         |
+|   adversary    |   opponent   |    9.05   |          1.0          |         similar          |          similar           |
+|     death      | catastrophe  |    4.13   |  0.20999999344348907  |       not similar        |        not similar         |
+|    monster     |    demon     |    6.95   |          1.0          |         similar          |          similar           |
+|      day       |   morning    |    4.87   |   0.6800000071525574  |         similar          |        not similar         |
+|      man       |    victor    |    1.9    |   0.1599999964237213  |       not similar        |        not similar         |
+|     friend     |     guy      |    3.88   |   0.4399999976158142  |         similar          |        not similar         |
+|      song      |    story     |    3.97   |   0.3499999940395355  |       not similar        |        not similar         |
+|      ray       |   sunshine   |    6.83   |  0.14000000059604645  |       not similar        |          similar           |
+|      guy       |     stud     |    5.83   |  0.07999999821186066  |       not similar        |          similar           |
+|    chicken     |     rice     |    1.43   |   0.4099999964237213  |         similar          |        not similar         |
+|      box       |   elevator   |    1.32   |  0.17000000178813934  |       not similar        |        not similar         |
+|     butter     |    potato    |    1.22   |  0.49000000953674316  |         similar          |        not similar         |
+|   apartment    |  furniture   |    1.28   |   0.3499999940395355  |       not similar        |        not similar         |
+|      lake      |    swamp     |    4.92   |   0.3499999940395355  |       not similar        |        not similar         |
+|     salad      |   vinegar    |    1.13   |  0.47999998927116394  |         similar          |        not similar         |
+|     flower     |     bulb     |    4.48   |   0.4000000059604645  |         similar          |        not similar         |
+|     cloud      |     mist     |    6.67   |          1.0          |         similar          |          similar           |
+|     driver     |    pilot     |    6.28   |   0.4099999964237213  |         similar          |          similar           |
+|     sugar      |    honey     |    5.13   |   0.5099999904632568  |         similar          |          similar           |
+|      body      |   shoulder   |    2.88   |  0.27000001072883606  |       not similar        |        not similar         |
+|      idea      |    image     |    3.55   |  0.30000001192092896  |       not similar        |        not similar         |
+|     father     |   brother    |    4.2    |   0.8199999928474426  |         similar          |        not similar         |
+|      moon      |    planet    |    5.87   |          0.5          |         similar          |          similar           |
+|      ball      |   costume    |    2.32   |  0.20999999344348907  |       not similar        |        not similar         |
+|      rail      |    fence     |    5.22   |  0.27000001072883606  |       not similar        |          similar           |
+|      room      |     bed      |    2.35   |   0.5400000214576721  |         similar          |        not similar         |
+|     flower     |     bush     |    4.25   |  0.029999999329447746 |       not similar        |        not similar         |
+|      bone      |     knee     |    4.17   |   0.4099999964237213  |         similar          |        not similar         |
+|      arm       |     knee     |    2.75   |   0.3700000047683716  |       not similar        |        not similar         |
+|     bottom     |     side     |    2.63   |          -1.0         |       not similar        |        not similar         |
+|     vessel     |     vein     |    5.15   |  0.11999999731779099  |       not similar        |          similar           |
+|      cat       |    rabbit    |    2.37   |  0.46000000834465027  |         similar          |        not similar         |
+|      meat      |   sandwich   |    2.35   |   0.4300000071525574  |         similar          |        not similar         |
+|     belief     |   concept    |    5.08   |   0.4699999988079071  |         similar          |          similar           |
+|  intelligence  |   insight    |    5.9    |  0.28999999165534973  |       not similar        |          similar           |
+|   attention    |   interest   |    7.22   |   0.4300000071525574  |         similar          |          similar           |
+|    attitude    |  confidence  |    4.35   |   0.4099999964237213  |         similar          |        not similar         |
+|     right      |   justice    |    7.05   |   0.3499999940395355  |       not similar        |          similar           |
+|    argument    |  agreement   |    1.45   |   0.2199999988079071  |       not similar        |        not similar         |
+|     depth      |  magnitude   |    6.12   |  0.38999998569488525  |       not similar        |          similar           |
+|     medium     |     news     |    3.65   |  0.10999999940395355  |       not similar        |        not similar         |
+|     winner     |  candidate   |    2.78   |   0.3799999952316284  |       not similar        |        not similar         |
+|    birthday    |     date     |    5.08   |   0.3700000047683716  |       not similar        |          similar           |
+|      fee       |   payment    |    7.15   |   0.5699999928474426  |         similar          |          similar           |
+|     bible      |     hymn     |    5.15   |   0.3499999940395355  |       not similar        |          similar           |
+|      exit      |   doorway    |    5.5    |  0.23999999463558197  |       not similar        |          similar           |
+|      man       |    sentry    |    3.25   |  0.09000000357627869  |       not similar        |        not similar         |
+|     aisle      |     hall     |    6.35   |  0.20000000298023224  |       not similar        |          similar           |
+|    whiskey     |     gin      |    6.28   |   0.5199999809265137  |         similar          |          similar           |
+|     blood      |    marrow    |    3.4    |  0.49000000953674316  |         similar          |        not similar         |
+|      oil       |     mink     |    1.23   |  0.009999999776482582 |       not similar        |        not similar         |
+|     floor      |     deck     |    5.55   |          1.0          |         similar          |          similar           |
+|      roof      |    floor     |    2.62   |   0.5099999904632568  |         similar          |        not similar         |
+|      door      |    floor     |    1.67   |  0.47999998927116394  |         similar          |        not similar         |
+|    shoulder    |     head     |    3.42   |  0.36000001430511475  |       not similar        |        not similar         |
+|     wagon      |   carriage   |    7.7    |   0.550000011920929   |         similar          |          similar           |
+|      car       |   carriage   |    5.13   |   0.3799999952316284  |       not similar        |          similar           |
+|     elbow      |    ankle     |    3.13   |   0.699999988079071   |         similar          |        not similar         |
+|     wealth     |     fame     |    4.02   |  0.30000001192092896  |       not similar        |        not similar         |
+|     sorrow     |    shame     |    4.77   |   0.5899999737739563  |         similar          |        not similar         |
+| administration |  management  |    7.25   |  0.41999998688697815  |         similar          |          similar           |
+| communication  | conversation |    8.02   |  0.33000001311302185  |       not similar        |          similar           |
+|   pollution    |  atmosphere  |    4.25   |  0.30000001192092896  |       not similar        |        not similar         |
+|    anatomy     |   biology    |    5.33   |   0.5099999904632568  |         similar          |          similar           |
+|    college     |  profession  |    3.12   |   0.3199999928474426  |       not similar        |        not similar         |
+|      book      |    topic     |    2.07   |  0.36000001430511475  |       not similar        |        not similar         |
+|    formula     |   equation   |    7.95   |   0.4000000059604645  |         similar          |          similar           |
+|      book      | information  |    5.0    |   0.3100000023841858  |       not similar        |          similar           |
+|      boy       |   partner    |    1.9    |  0.10000000149011612  |       not similar        |        not similar         |
+|      sky       |   universe   |    4.68   |          0.25         |       not similar        |        not similar         |
+|   population   |    people    |    7.68   |  0.47999998927116394  |         similar          |          similar           |
+|    college     |    class     |    4.13   |   0.3100000023841858  |       not similar        |        not similar         |
+|     chief      |    mayor     |    4.85   |   0.3199999928474426  |       not similar        |        not similar         |
+|     rabbi      |   minister   |    7.62   |   0.1599999964237213  |       not similar        |          similar           |
+|     meter      |     inch     |    5.08   |  0.38999998569488525  |       not similar        |          similar           |
+|   polyester    |    cotton    |    5.63   |  0.46000000834465027  |         similar          |          similar           |
+|     lawyer     |    banker    |    1.88   |   0.4699999988079071  |         similar          |        not similar         |
+|     violin     |  instrument  |    6.58   |   0.5299999713897705  |         similar          |          similar           |
+|      camp      |    cabin     |    4.2    |   0.2199999988079071  |       not similar        |        not similar         |
+|      pot       |  appliance   |    2.53   |  0.05999999865889549  |       not similar        |        not similar         |
+|     linen      |    fabric    |    7.47   |   0.550000011920929   |         similar          |          similar           |
+|    whiskey     |  champagne   |    5.33   |   0.4699999988079071  |         similar          |          similar           |
+|      girl      |    child     |    5.38   |   0.6200000047683716  |         similar          |          similar           |
+|    cottage     |    cabin     |    7.72   |   0.3400000035762787  |       not similar        |          similar           |
+|      bird      |     hen      |    7.03   |   0.2800000011920929  |       not similar        |          similar           |
+|     racket     |    noise     |    8.1    |          1.0          |         similar          |          similar           |
+|     sunset     |   evening    |    5.98   |   0.3499999940395355  |       not similar        |          similar           |
+|    drizzle     |     rain     |    9.17   |  0.44999998807907104  |         similar          |          similar           |
+|     adult      |     baby     |    2.22   |  0.38999998569488525  |       not similar        |        not similar         |
+|    charcoal    |     coal     |    7.63   |  0.36000001430511475  |       not similar        |          similar           |
+|      body      |    spine     |    4.78   |  0.30000001192092896  |       not similar        |        not similar         |
+|      head      |     nail     |    2.47   |  0.14000000059604645  |       not similar        |        not similar         |
+|      log       |    timber    |    8.05   |   0.4000000059604645  |         similar          |          similar           |
+|     spoon      |     cup      |    2.02   |  0.27000001072883606  |       not similar        |        not similar         |
+|      body      |    nerve     |    3.13   |   0.1899999976158142  |       not similar        |        not similar         |
+|      man       |   husband    |    5.32   |   0.4300000071525574  |         similar          |          similar           |
+|      bone      |     neck     |    2.53   |   0.4000000059604645  |         similar          |        not similar         |
+|  frustration   |    anger     |    6.5    |   0.800000011920929   |         similar          |          similar           |
+|     river      |     sea      |    5.72   |  0.36000001430511475  |       not similar        |          similar           |
+|      task      |     job      |    8.87   |          1.0          |         similar          |          similar           |
+|      club      |   society    |    5.23   |          1.0          |         similar          |          similar           |
+|   reflection   |    image     |    7.27   |   0.3700000047683716  |       not similar        |          similar           |
+|     prince     |     king     |    5.92   |   0.6200000047683716  |         similar          |          similar           |
+|      snow      |   weather    |    5.48   |  0.49000000953674316  |         similar          |          similar           |
+|     people     |    party     |    2.2    |  0.38999998569488525  |       not similar        |        not similar         |
+|      boy       |   brother    |    6.67   |   0.5400000214576721  |         similar          |          similar           |
+|      root      |    grass     |    3.55   |   0.3100000023841858  |       not similar        |        not similar         |
+|      brow      |     eye      |    3.82   |  0.23000000417232513  |       not similar        |        not similar         |
+|     money      |    pearl     |    2.1    |  0.10999999940395355  |       not similar        |        not similar         |
+|     money      |   diamond    |    3.42   |   0.1899999976158142  |       not similar        |        not similar         |
+|    vehicle     |     bus      |    6.47   |   0.5199999809265137  |         similar          |          similar           |
+|      cab       |     bus      |    5.6    |  0.47999998927116394  |         similar          |          similar           |
+|     house      |     barn     |    4.33   |  0.33000001311302185  |       not similar        |        not similar         |
+|     finger     |     palm     |    3.33   |   0.1899999976158142  |       not similar        |        not similar         |
+|      car       |    bridge    |    0.95   |          0.25         |       not similar        |        not similar         |
+|     effort     |  difficulty  |    4.45   |  0.20999999344348907  |       not similar        |        not similar         |
+|      fact      |   insight    |    4.77   |  0.18000000715255737  |       not similar        |        not similar         |
+|      job       |  management  |    3.97   |   0.4000000059604645  |         similar          |        not similar         |
+|     cancer     |   sickness   |    7.93   |   0.3100000023841858  |       not similar        |          similar           |
+|      word      |  newspaper   |    2.47   |  0.23999999463558197  |       not similar        |        not similar         |
+|    composer    |    writer    |    6.58   |   0.4699999988079071  |         similar          |          similar           |
+|     actor      |    singer    |    4.52   |   0.5299999713897705  |         similar          |        not similar         |
+|    shelter     |     hut      |    6.47   |  0.36000001430511475  |       not similar        |          similar           |
+|    bathroom    |   kitchen    |    3.1    |   0.6399999856948853  |         similar          |        not similar         |
+|     cabin      |     hut      |    6.53   |  0.27000001072883606  |       not similar        |          similar           |
+|      door      |   kitchen    |    1.67   |   0.4399999976158142  |         similar          |        not similar         |
+|     value      |    belief    |    7.07   |   0.3100000023841858  |       not similar        |          similar           |
+|     wisdom     | intelligence |    7.47   |   0.2800000011920929  |       not similar        |          similar           |
+|   ignorance    | intelligence |    1.5    |  0.07999999821186066  |       not similar        |        not similar         |
+|   happiness    |     luck     |    2.38   |   0.4000000059604645  |         similar          |        not similar         |
+|      idea      |    scheme    |    6.75   |   0.3499999940395355  |       not similar        |          similar           |
+|      mood      |   emotion    |    8.12   |  0.36000001430511475  |       not similar        |          similar           |
+|   happiness    |    peace     |    6.03   |   0.3100000023841858  |       not similar        |          similar           |
+|    despair     |    misery    |    7.22   |   0.6200000047683716  |         similar          |          similar           |
+|     logic      |  arithmetic  |    3.97   |   0.5099999904632568  |         similar          |        not similar         |
+|     denial     |  confession  |    1.03   |  0.36000001430511475  |       not similar        |        not similar         |
+|    argument    |  criticism   |    5.08   |   0.3799999952316284  |       not similar        |          similar           |
+|   aggression   |  hostility   |    8.48   |          1.0          |         similar          |          similar           |
+|    hysteria    |  confusion   |    6.33   |   0.3799999952316284  |       not similar        |          similar           |
+|   chemistry    |    theory    |    3.17   |   0.3400000035762787  |       not similar        |        not similar         |
+|     trial      |   verdict    |    3.33   |   0.6399999856948853  |         similar          |        not similar         |
+|    comfort     |    safety    |    5.8    |  0.33000001311302185  |       not similar        |          similar           |
+|   confidence   |     self     |    3.12   |  0.33000001311302185  |       not similar        |        not similar         |
+|     vision     |  perception  |    6.88   |  0.38999998569488525  |       not similar        |          similar           |
+|      era       |    decade    |    5.4    |   0.4699999988079071  |         similar          |          similar           |
+|   biography    |   fiction    |    1.38   |  0.47999998927116394  |         similar          |        not similar         |
+|   discussion   |   argument   |    5.48   |  0.46000000834465027  |         similar          |          similar           |
+|      code      |    symbol    |    6.03   |  0.28999999165534973  |       not similar        |          similar           |
+|     danger     |   disease    |    3.0    |  0.28999999165534973  |       not similar        |        not similar         |
+|    accident    | catastrophe  |    5.9    |   0.3199999928474426  |       not similar        |          similar           |
+|    journey     |     trip     |    8.88   |   0.6499999761581421  |         similar          |          similar           |
+|    activity    |   movement   |    7.15   |   0.3799999952316284  |       not similar        |          similar           |
+|     gossip     |     news     |    5.22   |  0.33000001311302185  |       not similar        |          similar           |
+|     father     |     god      |    3.57   |  0.41999998688697815  |         similar          |        not similar         |
+|     action     |    course    |    5.45   |  0.30000001192092896  |       not similar        |          similar           |
+|     fever      |   illness    |    7.65   |   0.4699999988079071  |         similar          |          similar           |
+|    aviation    |    flight    |    8.18   |  0.47999998927116394  |         similar          |          similar           |
+|      game      |    action    |    4.85   |   0.3499999940395355  |       not similar        |        not similar         |
+|    molecule    |     air      |    3.05   |  0.029999999329447746 |       not similar        |        not similar         |
+|      home      |    state     |    2.58   |   0.2800000011920929  |       not similar        |        not similar         |
+|      word      |  literature  |    4.77   |  0.36000001430511475  |       not similar        |        not similar         |
+|     adult      |   guardian   |    6.9    |   0.3400000035762787  |       not similar        |          similar           |
+|   newspaper    | information  |    5.65   |   0.2800000011920929  |       not similar        |          similar           |
+| communication  |  television  |    5.6    |          0.25         |       not similar        |          similar           |
+|     cousin     |    uncle     |    4.63   |   0.7200000286102295  |         similar          |        not similar         |
+|     author     |    reader    |    1.6    |   0.4300000071525574  |         similar          |        not similar         |
+|      guy       |   partner    |    3.57   |  0.20999999344348907  |       not similar        |        not similar         |
+|      area      |    corner    |    2.07   |  0.46000000834465027  |         similar          |        not similar         |
+|     ballad     |     song     |    7.53   |   0.6399999856948853  |         similar          |          similar           |
+|      wall      |  decoration  |    2.62   |  0.20000000298023224  |       not similar        |        not similar         |
+|      word      |     page     |    2.92   |  0.30000001192092896  |       not similar        |        not similar         |
+|     nurse      |  scientist   |    2.08   |   0.2199999988079071  |       not similar        |        not similar         |
+|   politician   |  president   |    7.38   |  0.28999999165534973  |       not similar        |          similar           |
+|   president    |    mayor     |    5.68   |   0.4000000059604645  |         similar          |          similar           |
+|      book      |    essay     |    4.72   |   0.6000000238418579  |         similar          |        not similar         |
+|      man       |   warrior    |    4.72   |   0.3199999928474426  |       not similar        |        not similar         |
+|    article     |   journal    |    6.18   |   0.5299999713897705  |         similar          |          similar           |
+|   breakfast    |    supper    |    4.4    |  0.49000000953674316  |         similar          |        not similar         |
+|     crowd      |    parade    |    3.93   |   0.4099999964237213  |         similar          |        not similar         |
+|     aisle      |   hallway    |    6.75   |  0.38999998569488525  |       not similar        |          similar           |
+|    teacher     |    rabbi     |    4.37   |  0.28999999165534973  |       not similar        |        not similar         |
+|      hip       |     lip      |    1.43   |          0.25         |       not similar        |        not similar         |
+|      book      |   article    |    5.43   |          0.5          |         similar          |          similar           |
+|      room      |     cell     |    4.58   |   0.2800000011920929  |       not similar        |        not similar         |
+|      box       |    booth     |    3.8    |  0.33000001311302185  |       not similar        |        not similar         |
+|    daughter    |     kid      |    4.17   |  0.33000001311302185  |       not similar        |        not similar         |
+|      limb      |     leg      |    6.9    |   0.3499999940395355  |       not similar        |          similar           |
+|     liver      |     lung     |    2.7    |   0.6200000047683716  |         similar          |        not similar         |
+|   classroom    |   hallway    |    2.0    |  0.47999998927116394  |         similar          |        not similar         |
+|    mountain    |    ledge     |    3.73   |   0.3100000023841858  |       not similar        |        not similar         |
+|      car       |   elevator   |    1.03   |   0.3199999928474426  |       not similar        |        not similar         |
+|      bed       |    couch     |    3.42   |  0.47999998927116394  |         similar          |        not similar         |
+|    clothes     |    button    |    2.3    |  0.12999999523162842  |       not similar        |        not similar         |
+|    clothes     |     coat     |    5.35   |   0.4300000071525574  |         similar          |          similar           |
+|     kidney     |    organ     |    6.17   |  0.41999998688697815  |         similar          |          similar           |
+|     apple      |    sauce     |    1.43   |  0.30000001192092896  |       not similar        |        not similar         |
+|    chicken     |    steak     |    3.73   |   0.5400000214576721  |         similar          |        not similar         |
+|      car       |     hose     |    0.87   |   0.1599999964237213  |       not similar        |        not similar         |
+|    tobacco     |  cigarette   |    7.5    |   0.7400000095367432  |         similar          |          similar           |
+|    student     |  professor   |    1.95   |  0.46000000834465027  |         similar          |        not similar         |
+|      baby      |   daughter   |    5.0    |   0.5199999809265137  |         similar          |          similar           |
+|      pipe      |    cigar     |    6.03   |   0.3400000035762787  |       not similar        |          similar           |
+|      milk      |    juice     |    4.05   |   0.5400000214576721  |         similar          |        not similar         |
+|      box       |    cigar     |    1.25   |  0.23999999463558197  |       not similar        |        not similar         |
+|   apartment    |    hotel     |    3.33   |   0.5600000023841858  |         similar          |        not similar         |
+|      cup       |     cone     |    3.17   |  0.12999999523162842  |       not similar        |        not similar         |
+|     horse      |      ox      |    3.02   |   0.4000000059604645  |         similar          |        not similar         |
+|     throat     |     nose     |    2.8    |   0.550000011920929   |         similar          |        not similar         |
+|      bone      |    teeth     |    4.17   |  0.47999998927116394  |         similar          |        not similar         |
+|      bone      |    elbow     |    3.78   |   0.4399999976158142  |         similar          |        not similar         |
+|     bacon      |     bean     |    1.22   |  0.27000001072883606  |       not similar        |        not similar         |
+|      cup       |     jar      |    5.13   |   0.1599999964237213  |       not similar        |          similar           |
+|     proof      |     fact     |    7.3    |  0.49000000953674316  |         similar          |          similar           |
+|  appointment   |  engagement  |    6.75   |          1.0          |         similar          |          similar           |
+|    birthday    |     year     |    1.67   |   0.3400000035762787  |       not similar        |        not similar         |
+|      word      |     clue     |    2.53   |  0.28999999165534973  |       not similar        |        not similar         |
+|     author     |   creator    |    8.02   |   0.4399999976158142  |         similar          |          similar           |
+|      atom      |    carbon    |    3.1    |   0.3700000047683716  |       not similar        |        not similar         |
+|   archbishop   |    bishop    |    7.05   |   0.7400000095367432  |         similar          |          similar           |
+|     letter     |  paragraph   |    4.0    |   0.4099999964237213  |         similar          |        not similar         |
+|      page      |  paragraph   |    3.03   |   0.4399999976158142  |         similar          |        not similar         |
+|    steeple     |    chapel    |    7.08   |   0.3199999928474426  |       not similar        |          similar           |
+|     muscle     |     bone     |    3.65   |          0.5          |         similar          |        not similar         |
+|     muscle     |    tongue    |    5.0    |   0.1599999964237213  |       not similar        |          similar           |
+|      boy       |   soldier    |    2.15   |  0.44999998807907104  |         similar          |        not similar         |
+|     belly      |   abdomen    |    8.13   |          1.0          |         similar          |          similar           |
+|      guy       |     girl     |    3.33   |   0.3799999952316284  |       not similar        |        not similar         |
+|      bed       |    chair     |    3.5    |   0.3700000047683716  |       not similar        |        not similar         |
+|    clothes     |    jacket    |    5.15   |  0.47999998927116394  |         similar          |          similar           |
+|      gun       |    knife     |    3.65   |   0.4000000059604645  |         similar          |        not similar         |
+|      tin       |    metal     |    5.63   |   0.4300000071525574  |         similar          |          similar           |
+|     bottle     |  container   |    7.93   |   0.3499999940395355  |       not similar        |          similar           |
+|      hen       |    turkey    |    6.13   |  0.10999999940395355  |       not similar        |          similar           |
+|      meat      |    bread     |    1.67   |   0.5400000214576721  |         similar          |        not similar         |
+|      arm       |     bone     |    3.83   |   0.2800000011920929  |       not similar        |        not similar         |
+|      neck      |    spine     |    5.32   |   0.5299999713897705  |         similar          |          similar           |
+|     apple      |    lemon     |    4.05   |   0.3499999940395355  |       not similar        |        not similar         |
+|     agony      |    grief     |    7.63   |   0.550000011920929   |         similar          |          similar           |
+|   assignment   |     task     |    8.7    |   0.4699999988079071  |         similar          |          similar           |
+|     night      |     dawn     |    2.95   |          0.5          |         similar          |        not similar         |
+|     dinner     |     soup     |    3.72   |   0.4000000059604645  |         similar          |        not similar         |
+|      calf      |     bull     |    4.93   |   0.3199999928474426  |       not similar        |        not similar         |
+|      snow      |    storm     |    4.8    |   0.3799999952316284  |       not similar        |        not similar         |
+|      nail      |     hand     |    3.42   |  0.27000001072883606  |       not similar        |        not similar         |
+|      dog       |    horse     |    2.38   |   0.5400000214576721  |         similar          |        not similar         |
+|      arm       |     neck     |    1.58   |  0.44999998807907104  |         similar          |        not similar         |
+|      ball      |    glove     |    1.75   |   0.4699999988079071  |         similar          |        not similar         |
+|      flu       |    fever     |    6.08   |   0.5199999809265137  |         similar          |          similar           |
+|      fee       |    salary    |    3.72   |  0.44999998807907104  |         similar          |        not similar         |
+|     nerve      |    brain     |    3.88   |   0.4699999988079071  |         similar          |        not similar         |
+|     beast      |    animal    |    7.83   |          1.0          |         similar          |          similar           |
+|     dinner     |   chicken    |    2.85   |   0.4000000059604645  |         similar          |        not similar         |
+|      girl      |     maid     |    2.93   |  0.38999998569488525  |       not similar        |        not similar         |
+|     child      |     boy      |    5.75   |   0.6000000238418579  |         similar          |          similar           |
+|    alcohol     |     wine     |    7.42   |   0.4099999964237213  |         similar          |          similar           |
+|      nose      |    mouth     |    3.73   |   0.550000011920929   |         similar          |        not similar         |
+|     street     |     car      |    2.38   |  0.30000001192092896  |       not similar        |        not similar         |
+|      bell      |     door     |    2.2    |  0.25999999046325684  |       not similar        |        not similar         |
+|      box       |     hat      |    1.3    |   0.3100000023841858  |       not similar        |        not similar         |
+|     belief     |  impression  |    5.95   |          1.0          |         similar          |          similar           |
+|      bias      |   opinion    |    5.6    |   0.3100000023841858  |       not similar        |          similar           |
+|   attention    |  awareness   |    8.73   |   0.4099999964237213  |         similar          |          similar           |
+|     anger      |     mood     |    4.1    |   0.3499999940395355  |       not similar        |        not similar         |
+|    elegance    |    style     |    5.72   |  0.46000000834465027  |         similar          |          similar           |
+|     beauty     |     age      |    1.58   |  0.25999999046325684  |       not similar        |        not similar         |
+|      book      |    theme     |    2.58   |   0.3400000035762787  |       not similar        |        not similar         |
+|     friend     |    mother    |    2.53   |   0.5799999833106995  |         similar          |        not similar         |
+|    vitamin     |     iron     |    5.55   |  0.25999999046325684  |       not similar        |          similar           |
+|      car       |   factory    |    2.75   |  0.41999998688697815  |         similar          |        not similar         |
+|      pact      |  condition   |    2.45   |  0.17000000178813934  |       not similar        |        not similar         |
+|    chapter     |    choice    |    0.48   |  0.09000000357627869  |       not similar        |        not similar         |
+|   arithmetic   |    rhythm    |    2.35   |   0.1899999976158142  |       not similar        |        not similar         |
+|     winner     |   presence   |    1.08   |  0.07999999821186066  |       not similar        |        not similar         |
+|     belief     |    flower    |    0.4    |  0.03999999910593033  |       not similar        |        not similar         |
+|     winner     |     goal     |    3.23   |   0.3499999940395355  |       not similar        |        not similar         |
+|     trick      |     size     |    0.48   |  0.07000000029802322  |       not similar        |        not similar         |
+|     choice     |     vein     |    0.98   |  0.09000000357627869  |       not similar        |        not similar         |
+|      hymn      |   conquest   |    0.68   |  0.07999999821186066  |       not similar        |        not similar         |
+|   endurance    |     band     |    0.4    |  0.009999999776482582 |       not similar        |        not similar         |
+|      jail      |    choice    |    1.08   |  0.05999999865889549  |       not similar        |        not similar         |
+|   condition    |     boy      |    0.48   |  0.25999999046325684  |       not similar        |        not similar         |
+|     flower     |  endurance   |    0.4    |  -0.07000000029802322 |       not similar        |        not similar         |
+|      hole      |  agreement   |    0.3    |  0.03999999910593033  |       not similar        |        not similar         |
+|     doctor     |    temper    |    0.48   |          -0.0         |       not similar        |        not similar         |
+|   fraternity   |     door     |    0.68   |  0.10000000149011612  |       not similar        |        not similar         |
+|      task      |    woman     |    0.68   |  0.14000000059604645  |       not similar        |        not similar         |
+|   fraternity   |   baseball   |    0.88   |  0.23999999463558197  |       not similar        |        not similar         |
+|      cent      |     size     |    0.4    |  0.20000000298023224  |       not similar        |        not similar         |
+|    presence    |     door     |    0.48   |  0.20999999344348907  |       not similar        |        not similar         |
+|     mouse      |  management  |    0.48   |  0.019999999552965164 |       not similar        |        not similar         |
+|      task      |   highway    |    0.48   |  0.15000000596046448  |       not similar        |        not similar         |
+|     liquor     |   century    |    0.4    |  0.019999999552965164 |       not similar        |        not similar         |
+|      task      |    straw     |    0.68   |  0.019999999552965164 |       not similar        |        not similar         |
+|     island     |     task     |    0.3    |  0.17000000178813934  |       not similar        |        not similar         |
+|     night      |   chapter    |    0.48   |  0.10999999940395355  |       not similar        |        not similar         |
+|   pollution    |  president   |    0.68   |  0.029999999329447746 |       not similar        |        not similar         |
+|      gun       |    trick     |    0.48   |  0.10999999940395355  |       not similar        |        not similar         |
+|      bath      |    trick     |    0.58   |  0.10000000149011612  |       not similar        |        not similar         |
+|      diet      |    apple     |    1.18   |  0.15000000596046448  |       not similar        |        not similar         |
+|      cent      |     wife     |    0.58   |  0.05000000074505806  |       not similar        |        not similar         |
+|    chapter     |     tail     |    0.3    |  0.07000000029802322  |       not similar        |        not similar         |
+|     course     |   stomach    |    0.58   |  0.14000000059604645  |       not similar        |        not similar         |
+|      hymn      |    straw     |    0.4    |  -0.10999999940395355 |       not similar        |        not similar         |
+|    dentist     |   colonel    |    0.4    |   0.1599999964237213  |       not similar        |        not similar         |
+|      wife      |    straw     |    0.4    |  0.07000000029802322  |       not similar        |        not similar         |
+|      hole      |     wife     |    0.68   |  0.07999999821186066  |       not similar        |        not similar         |
+|     pupil      |  president   |    0.78   |  0.009999999776482582 |       not similar        |        not similar         |
+|      bath      |     wife     |    0.48   |  0.15000000596046448  |       not similar        |        not similar         |
+|     people     |     cent     |    0.48   |  0.10999999940395355  |       not similar        |        not similar         |
+|    formula     |     log      |    1.77   |  0.03999999910593033  |       not similar        |        not similar         |
+|     woman      |     fur      |    0.58   |  0.15000000596046448  |       not similar        |        not similar         |
+|     apple      |   sunshine   |    0.58   |  0.05000000074505806  |       not similar        |        not similar         |
+|      gun       |     dawn     |    1.18   |  0.18000000715255737  |       not similar        |        not similar         |
+|      meal      |    waist     |    0.98   |  0.03999999910593033  |       not similar        |        not similar         |
+|     camera     |  president   |    0.48   |  0.09000000357627869  |       not similar        |        not similar         |
+|     liquor     |     band     |    0.68   |  0.05000000074505806  |       not similar        |        not similar         |
+|    stomach     |     vein     |    2.35   |  0.30000001192092896  |       not similar        |        not similar         |
+|      gun       |     fur      |    0.3    |  0.12999999523162842  |       not similar        |        not similar         |
+|     couch      |   baseball   |    0.88   |  0.12999999523162842  |       not similar        |        not similar         |
+|     worker     |    camera    |    0.68   |   0.1599999964237213  |       not similar        |        not similar         |
+|      deck      |    mouse     |    0.48   |  0.12999999523162842  |       not similar        |        not similar         |
+|      rice      |     boy      |    0.4    |  0.07999999821186066  |       not similar        |        not similar         |
+|     people     |     gun      |    0.68   |  0.20999999344348907  |       not similar        |        not similar         |
+|     cliff      |     tail     |    0.3    |  0.11999999731779099  |       not similar        |        not similar         |
+|     ankle      |    window    |    0.3    |  0.15000000596046448  |       not similar        |        not similar         |
+|    princess    |    island    |    0.3    |   0.2199999988079071  |       not similar        |        not similar         |
+|   container    |    mouse     |    0.3    |  0.03999999910593033  |       not similar        |        not similar         |
+|     wagon      |  container   |    2.65   |  0.20999999344348907  |       not similar        |        not similar         |
+|     people     |   balloon    |    0.48   |  0.09000000357627869  |       not similar        |        not similar         |
+|     dollar     |    people    |    0.4    |   0.1599999964237213  |       not similar        |        not similar         |
+|      bath      |   balloon    |    0.4    |  0.11999999731779099  |       not similar        |        not similar         |
+|    stomach     |   bedroom    |    0.4    |  0.11999999731779099  |       not similar        |        not similar         |
+|    bicycle     |   bedroom    |    0.4    |  0.17000000178813934  |       not similar        |        not similar         |
+|      log       |     bath     |    0.4    |  0.05999999865889549  |       not similar        |        not similar         |
+|      bowl      |     tail     |    0.48   |  0.11999999731779099  |       not similar        |        not similar         |
+|       go       |     come     |    2.42   |          -1.0         |       not similar        |        not similar         |
+|      take      |    steal     |    6.18   |   0.3199999928474426  |       not similar        |          similar           |
+|     listen     |     hear     |    8.17   |          1.0          |         similar          |          similar           |
+|     think      | rationalize  |    8.25   |  0.11999999731779099  |       not similar        |          similar           |
+|     occur      |    happen    |    9.32   |          1.0          |         similar          |          similar           |
+|     vanish     |  disappear   |    9.8    |          1.0          |         similar          |          similar           |
+|    multiply    |    divide    |    1.75   |          -1.0         |       not similar        |        not similar         |
+|     plead      |     beg      |    9.08   |   0.3700000047683716  |       not similar        |          similar           |
+|     begin      |  originate   |    8.2    |  0.07999999821186066  |       not similar        |          similar           |
+|    protect     |    defend    |    9.13   |   0.6399999856948853  |         similar          |          similar           |
+|      kill      |   destroy    |    5.9    |   0.6000000238418579  |         similar          |          similar           |
+|     create     |     make     |    8.72   |          1.0          |         similar          |          similar           |
+|     accept     |    reject    |    0.83   |          -1.0         |       not similar        |        not similar         |
+|     ignore     |    avoid     |    6.87   |  0.44999998807907104  |         similar          |          similar           |
+|     carry      |    bring     |    5.8    |   0.5400000214576721  |         similar          |          similar           |
+|     leave      |    enter     |    0.95   |          -1.0         |       not similar        |        not similar         |
+|     choose     |    elect     |    7.62   |  0.49000000953674316  |         similar          |          similar           |
+|      lose      |     fail     |    7.33   |   0.5299999713897705  |         similar          |          similar           |
+|   encourage    |  discourage  |    1.58   |          -1.0         |       not similar        |        not similar         |
+|    achieve     |  accomplish  |    8.57   |          1.0          |         similar          |          similar           |
+|      make      |  construct   |    8.33   |          1.0          |         similar          |          similar           |
+|     listen     |     obey     |    4.93   |  0.28999999165534973  |       not similar        |        not similar         |
+|     inform     |    notify    |    9.25   |   0.6899999976158142  |         similar          |          similar           |
+|    receive     |     give     |    1.47   |   0.550000011920929   |         similar          |        not similar         |
+|     borrow     |     beg      |    2.62   |   0.3400000035762787  |       not similar        |        not similar         |
+|      take      |    obtain    |    7.1    |   0.3799999952316284  |       not similar        |          similar           |
+|     advise     |  recommend   |    8.1    |   0.6000000238418579  |         similar          |          similar           |
+|    imitate     |   portray    |    6.75   |   0.4000000059604645  |         similar          |          similar           |
+|      win       |   succeed    |    7.9    |          1.0          |         similar          |          similar           |
+|     think      |    decide    |    5.13   |  0.46000000834465027  |         similar          |          similar           |
+|     greet      |     meet     |    6.17   |  0.33000001311302185  |       not similar        |          similar           |
+|     agree      |    argue     |    0.77   |   0.6000000238418579  |         similar          |        not similar         |
+|     enjoy      |  entertain   |    5.92   |   0.3100000023841858  |       not similar        |          similar           |
+|    destroy     |     make     |    1.6    |   0.3499999940395355  |       not similar        |        not similar         |
+|      save      |   protect    |    6.58   |  0.44999998807907104  |         similar          |          similar           |
+|      give      |     lend     |    7.22   |  0.44999998807907104  |         similar          |          similar           |
+|   understand   |     know     |    7.47   |   0.800000011920929   |         similar          |          similar           |
+|      take      |   receive    |    5.08   |   0.4300000071525574  |         similar          |          similar           |
+|     accept     | acknowledge  |    6.88   |   0.5899999737739563  |         similar          |          similar           |
+|     decide     |    choose    |    8.87   |   0.6899999976158142  |         similar          |          similar           |
+|     accept     |   believe    |    6.75   |  0.49000000953674316  |         similar          |          similar           |
+|      keep      |   possess    |    8.27   |   0.1599999964237213  |       not similar        |          similar           |
+|      roam      |    wander    |    8.83   |          1.0          |         similar          |          similar           |
+|    succeed     |     fail     |    0.83   |          -1.0         |       not similar        |        not similar         |
+|     spend      |     save     |    0.55   |   0.4099999964237213  |         similar          |        not similar         |
+|     leave      |      go      |    7.63   |   0.6600000262260437  |         similar          |          similar           |
+|      come      |    attend    |    8.1    |   0.3499999940395355  |       not similar        |          similar           |
+|      know      |   believe    |    5.5    |   0.7400000095367432  |         similar          |          similar           |
+|     gather     |     meet     |    7.3    |          1.0          |         similar          |          similar           |
+|      make      |     earn     |    7.62   |          1.0          |         similar          |          similar           |
+|     forget     |    ignore    |    3.07   |          0.5          |         similar          |        not similar         |
+|    multiply    |     add      |    2.7    |   0.3199999928474426  |       not similar        |        not similar         |
+|     shrink     |     grow     |    0.23   |   0.5699999928474426  |         similar          |        not similar         |
+|     arrive     |    leave     |    1.33   |          -1.0         |       not similar        |        not similar         |
+|    succeed     |     try      |    3.98   |   0.3499999940395355  |       not similar        |        not similar         |
+|     accept     |     deny     |    1.75   |   0.4300000071525574  |         similar          |        not similar         |
+|     arrive     |     come     |    7.05   |          1.0          |         similar          |          similar           |
+|     agree      |    differ    |    1.05   |  0.41999998688697815  |         similar          |        not similar         |
+|      send      |   receive    |    1.08   |   0.5099999904632568  |         similar          |        not similar         |
+|      win       |   dominate   |    5.68   |   0.3100000023841858  |       not similar        |          similar           |
+|      add       |    divide    |    2.3    |  0.28999999165534973  |       not similar        |        not similar         |
+|      kill      |    choke     |    4.92   |  0.18000000715255737  |       not similar        |        not similar         |
+|    acquire     |     get      |    8.82   |          1.0          |         similar          |          similar           |
+|  participate   |     join     |    7.7    |   0.6200000047683716  |         similar          |          similar           |
+|     leave      |    remain    |    2.53   |   0.5199999809265137  |         similar          |        not similar         |
+|       go       |    enter     |    4.0    |   0.4699999988079071  |         similar          |        not similar         |
+|      take      |    carry     |    5.23   |          1.0          |         similar          |          similar           |
+|     forget     |    learn     |    1.18   |   0.5099999904632568  |         similar          |        not similar         |
+|    appoint     |    elect     |    8.17   |   0.550000011920929   |         similar          |          similar           |
+|     engage     |    marry     |    5.43   |          0.25         |       not similar        |          similar           |
+|      ask       |     pray     |    3.72   |   0.4399999976158142  |         similar          |        not similar         |
+|       go       |     send     |    3.75   |          0.5          |         similar          |        not similar         |
+|      take      |   deliver    |    4.37   |   0.4000000059604645  |         similar          |        not similar         |
+|     speak      |     hear     |    3.02   |   0.5899999737739563  |         similar          |        not similar         |
+|    analyze     |   evaluate   |    8.03   |   0.7599999904632568  |         similar          |          similar           |
+|     argue      | rationalize  |    4.2    |  0.20999999344348907  |       not similar        |        not similar         |
+|      lose      |     keep     |    1.05   |          -1.0         |       not similar        |        not similar         |
+|    compare     |   analyze    |    8.1    |   0.550000011920929   |         similar          |          similar           |
+|  disorganize   |   organize   |    1.45   |          -1.0         |       not similar        |        not similar         |
+|       go       |    allow     |    3.62   |   0.550000011920929   |         similar          |        not similar         |
+|      take      |   possess    |    7.2    |  0.23000000417232513  |       not similar        |          similar           |
+|     learn      |    listen    |    3.88   |   0.5299999713897705  |         similar          |        not similar         |
+|    destroy     |  construct   |    0.92   |   0.3400000035762787  |       not similar        |        not similar         |
+|     create     |    build     |    8.48   |   0.6200000047683716  |         similar          |          similar           |
+|     steal      |     buy      |    1.13   |          1.0          |         similar          |        not similar         |
+|      kill      |     hang     |    4.45   |  0.15000000596046448  |       not similar        |        not similar         |
+|     forget     |     know     |    0.92   |   0.6299999952316284  |         similar          |        not similar         |
+|     create     |   imagine    |    5.13   |   0.3700000047683716  |       not similar        |          similar           |
+|       do       |    happen    |    4.23   |   0.6800000071525574  |         similar          |        not similar         |
+|      win       |  accomplish  |    7.85   |   0.3199999928474426  |       not similar        |          similar           |
+|      give      |     deny     |    1.43   |   0.4300000071525574  |         similar          |        not similar         |
+|    deserve     |     earn     |    5.8    |   0.4399999976158142  |         similar          |          similar           |
+|      get       |     put      |    1.98   |   0.6700000166893005  |         similar          |        not similar         |
+|     locate     |     find     |    8.73   |   0.5899999737739563  |         similar          |          similar           |
+|     appear     |    attend    |    6.28   |   0.2800000011920929  |       not similar        |          similar           |
+|      know      |  comprehend  |    7.63   |  0.36000001430511475  |       not similar        |          similar           |
+|    pretend     |   imagine    |    8.47   |   0.5199999809265137  |         similar          |          similar           |
+|    satisfy     |    please    |    7.67   |  0.23000000417232513  |       not similar        |          similar           |
+|    cherish     |     keep     |    4.85   |  0.18000000715255737  |       not similar        |        not similar         |
+|     argue      |    differ    |    5.15   |   0.3700000047683716  |       not similar        |          similar           |
+|    overcome    |   dominate   |    6.25   |  0.23000000417232513  |       not similar        |          similar           |
+|     behave     |     obey     |    7.3    |  0.36000001430511475  |       not similar        |          similar           |
+|   cooperate    | participate  |    6.43   |  0.47999998927116394  |         similar          |          similar           |
+|    achieve     |     try      |    4.42   |  0.41999998688697815  |         similar          |        not similar         |
+|      fail      |  discourage  |    3.33   |   0.2800000011920929  |       not similar        |        not similar         |
+|     begin      |     quit     |    1.28   |   0.3499999940395355  |       not similar        |        not similar         |
+|      say       | participate  |    3.82   |   0.3199999928474426  |       not similar        |        not similar         |
+|      come      |    bring     |    2.42   |   0.7200000286102295  |         similar          |        not similar         |
+|    declare     |   announce   |    9.08   |          1.0          |         similar          |          similar           |
+|      read      |  comprehend  |    4.7    |  0.28999999165534973  |       not similar        |        not similar         |
+|      take      |    leave     |    2.47   |   0.6399999856948853  |         similar          |        not similar         |
+|    proclaim    |   announce   |    8.18   |   0.3100000023841858  |       not similar        |          similar           |
+|    acquire     |    obtain    |    8.57   |   0.5099999904632568  |         similar          |          similar           |
+|    conclude    |    decide    |    7.75   |  0.47999998927116394  |         similar          |          similar           |
+|     please     |    plead     |    2.98   |   0.2800000011920929  |       not similar        |        not similar         |
+|     argue      |    prove     |    4.83   |   0.5099999904632568  |         similar          |        not similar         |
+|      ask       |    plead     |    6.47   |  0.36000001430511475  |       not similar        |          similar           |
+|      find      |  disappear   |    0.77   |   0.3199999928474426  |       not similar        |        not similar         |
+|    inspect     |   examine    |    8.75   |   0.5400000214576721  |         similar          |          similar           |
+|     verify     |   justify    |    4.08   |          0.25         |       not similar        |        not similar         |
+|     assume     |   predict    |    4.85   |   0.3499999940395355  |       not similar        |        not similar         |
+|     learn      |   evaluate   |    4.17   |   0.4099999964237213  |         similar          |        not similar         |
+|     argue      |   justify    |    5.0    |   0.5099999904632568  |         similar          |          similar           |
+|      make      |    become    |    4.77   |   0.5699999928474426  |         similar          |        not similar         |
+|    discover    |  originate   |    4.83   |  0.07999999821186066  |       not similar        |        not similar         |
+|    achieve     |   succeed    |    7.5    |   0.3799999952316284  |       not similar        |          similar           |
+|      give      |     put      |    3.65   |   0.6800000071525574  |         similar          |        not similar         |
+|   understand   |    listen    |    4.68   |   0.550000011920929   |         similar          |        not similar         |
+|     expand     |     grow     |    8.27   |   0.5600000023841858  |         similar          |          similar           |
+|     borrow     |     sell     |    1.73   |   0.5099999904632568  |         similar          |        not similar         |
+|      keep      |   protect    |    5.4    |   0.550000011920929   |         similar          |          similar           |
+|    explain     |    prove     |    4.1    |  0.44999998807907104  |         similar          |        not similar         |
+|     assume     |   pretend    |    3.72   |   0.3799999952316284  |       not similar        |        not similar         |
+|     agree      |    please    |    4.13   |  0.28999999165534973  |       not similar        |        not similar         |
+|    forgive     |    forget    |    3.92   |   0.550000011920929   |         similar          |        not similar         |
+|    clarify     |   explain    |    8.33   |   0.5400000214576721  |         similar          |          similar           |
+|   understand   |   forgive    |    4.87   |  0.36000001430511475  |       not similar        |        not similar         |
+|     remind     |    forget    |    0.87   |   0.6000000238418579  |         similar          |        not similar         |
+|      get       |    remain    |    1.6    |  0.28999999165534973  |       not similar        |        not similar         |
+|    realize     |   discover   |    7.47   |   0.4099999964237213  |         similar          |          similar           |
+|    require     |   inquire    |    1.82   |  0.019999999552965164 |       not similar        |        not similar         |
+|     ignore     |     ask      |    1.07   |   0.5099999904632568  |         similar          |        not similar         |
+|     think      |   inquire    |    4.77   |  0.07000000029802322  |       not similar        |        not similar         |
+|     reject     |    avoid     |    4.78   |  0.23999999463558197  |       not similar        |        not similar         |
+|     argue      |   persuade   |    6.23   |   0.3700000047683716  |       not similar        |          similar           |
+|     pursue     |   persuade   |    3.17   |   0.4099999964237213  |         similar          |        not similar         |
+|     accept     |   forgive    |    3.73   |  0.36000001430511475  |       not similar        |        not similar         |
+|       do       |     quit     |    1.17   |  0.30000001192092896  |       not similar        |        not similar         |
+|  investigate   |   examine    |    8.1    |   0.6800000071525574  |         similar          |          similar           |
+|    discuss     |   explain    |    6.67   |  0.46000000834465027  |         similar          |          similar           |
+|      owe       |     lend     |    2.32   |  0.36000001430511475  |       not similar        |        not similar         |
+|    explore     |   discover   |    8.48   |   0.4399999976158142  |         similar          |          similar           |
+|    complain    |    argue     |    4.8    |          0.5          |         similar          |        not similar         |
+|    withdraw    |    reject    |    6.38   |  0.41999998688697815  |         similar          |          similar           |
+|      keep      |    borrow    |    2.25   |   0.3100000023841858  |       not similar        |        not similar         |
+|      beg       |     ask      |    6.0    |   0.3700000047683716  |       not similar        |          similar           |
+|    arrange     |   organize   |    8.27   |  0.49000000953674316  |         similar          |          similar           |
+|     reduce     |    shrink    |    8.02   |          1.0          |         similar          |          similar           |
+|     speak      | acknowledge  |    4.67   |  0.46000000834465027  |         similar          |        not similar         |
+|      give      |    borrow    |    2.22   |  0.28999999165534973  |       not similar        |        not similar         |
+|      kill      |    defend    |    2.63   |   0.3199999928474426  |       not similar        |        not similar         |
+|   disappear    |    shrink    |    5.8    |  0.49000000953674316  |         similar          |          similar           |
+|    deliver     |    carry     |    3.88   |   0.5099999904632568  |         similar          |        not similar         |
+|    breathe     |    choke     |    1.37   |  0.20999999344348907  |       not similar        |        not similar         |
+|  acknowledge   |    notify    |    5.3    |  0.28999999165534973  |       not similar        |          similar           |
+|     become     |     seem     |    2.63   |  0.46000000834465027  |         similar          |        not similar         |
+|    pretend     |     seem     |    4.68   |  0.41999998688697815  |         similar          |        not similar         |
+|   accomplish   |    become    |    4.0    |  0.20000000298023224  |       not similar        |        not similar         |
+|  contemplate   |    think     |    8.82   |  0.25999999046325684  |       not similar        |          similar           |
+|   determine    |   predict    |    5.8    |   0.4699999988079071  |         similar          |          similar           |
+|     please     |  entertain   |    5.0    |   0.3100000023841858  |       not similar        |          similar           |
+|     remain     |    retain    |    5.75   |   0.4399999976158142  |         similar          |          similar           |
+|    pretend     |   portray    |    7.03   |   0.3100000023841858  |       not similar        |          similar           |
+|     forget     |    retain    |    0.63   |  0.11999999731779099  |       not similar        |        not similar         |
+|      want      |    choose    |    4.78   |   0.6100000143051147  |         similar          |        not similar         |
+|      lose      |     get      |    0.77   |   0.5899999737739563  |         similar          |        not similar         |
+|      try       |    think     |    2.62   |   0.5099999904632568  |         similar          |        not similar         |
+|     become     |    appear    |    4.77   |   0.4399999976158142  |         similar          |        not similar         |
+|     leave      |    ignore    |    4.42   |  0.38999998569488525  |       not similar        |        not similar         |
+|     accept     |  recommend   |    2.75   |  0.38999998569488525  |       not similar        |        not similar         |
+|     leave      |    wander    |    3.57   |  0.28999999165534973  |       not similar        |        not similar         |
+|      keep      |     give     |    1.05   |   0.5699999928474426  |         similar          |        not similar         |
+|      give      |    allow     |    5.15   |   0.6399999856948853  |         similar          |          similar           |
+|     bring      |     send     |    2.97   |  0.47999998927116394  |         similar          |        not similar         |
+|     absorb     |    learn     |    5.48   |   0.3199999928474426  |       not similar        |          similar           |
+|    acquire     |     find     |    6.38   |  0.27000001072883606  |       not similar        |          similar           |
+|     leave      |    appear    |    0.97   |   0.4000000059604645  |         similar          |        not similar         |
+|     create     |   destroy    |    0.63   |   0.4300000071525574  |         similar          |        not similar         |
+|     begin      |      go      |    7.42   |   0.4699999988079071  |         similar          |          similar           |
+|      get       |     buy      |    5.08   |   0.5299999713897705  |         similar          |          similar           |
+|    collect     |     save     |    6.67   |   0.3400000035762787  |       not similar        |          similar           |
+|    replace     |   restore    |    5.73   |   0.3700000047683716  |       not similar        |          similar           |
+|      join      |     add      |    8.1    |   0.1899999976158142  |       not similar        |          similar           |
+|      join      |    marry     |    5.35   |   0.3499999940395355  |       not similar        |          similar           |
+|     accept     |   deliver    |    1.58   |  0.33000001311302185  |       not similar        |        not similar         |
+|     attach     |     join     |    7.75   |  0.07999999821186066  |       not similar        |          similar           |
+|      put       |     hang     |    3.0    |   0.3100000023841858  |       not similar        |        not similar         |
+|       go       |     sell     |    0.97   |  0.44999998807907104  |         similar          |        not similar         |
+|  communicate   |     pray     |    3.55   |          0.25         |       not similar        |        not similar         |
+|      give      |    steal     |    0.5    |   0.3799999952316284  |       not similar        |        not similar         |
+|      add       |    build     |    4.92   |  0.33000001311302185  |       not similar        |        not similar         |
+|     bring      |   restore    |    2.62   |  0.49000000953674316  |         similar          |        not similar         |
+|   comprehend   |   satisfy    |    2.55   |  0.23999999463558197  |       not similar        |        not similar         |
+|    portray     |    decide    |    1.18   |  0.15000000596046448  |       not similar        |        not similar         |
+|    organize    |    become    |    1.77   |   0.2199999988079071  |       not similar        |        not similar         |
+|      give      |     know     |    0.88   |   0.6000000238418579  |         similar          |        not similar         |
+|      say       |    verify    |    4.9    |  0.25999999046325684  |       not similar        |        not similar         |
+|   cooperate    |     join     |    5.18   |   0.4399999976158142  |         similar          |          similar           |
+|    arrange     |   require    |    0.98   |  0.23000000417232513  |       not similar        |        not similar         |
+|     borrow     |     want     |    1.77   |   0.2800000011920929  |       not similar        |        not similar         |
+|  investigate   |    pursue    |    7.15   |  0.38999998569488525  |       not similar        |          similar           |
+|     ignore     |   explore    |    0.4    |  0.23000000417232513  |       not similar        |        not similar         |
+|     bring      |   complain   |    0.98   |  0.25999999046325684  |       not similar        |        not similar         |
+|     enter      |     owe      |    0.68   |  0.019999999552965164 |       not similar        |        not similar         |
+|    portray     |    notify    |    0.78   | -0.019999999552965164 |       not similar        |        not similar         |
+|     remind     |     sell     |    0.4    |  0.15000000596046448  |       not similar        |        not similar         |
+|     absorb     |   possess    |    5.0    |  0.25999999046325684  |       not similar        |          similar           |
+|      join      |   acquire    |    2.85   |  0.28999999165534973  |       not similar        |        not similar         |
+|      send      |    attend    |    1.67   |   0.3400000035762787  |       not similar        |        not similar         |
+|     gather     |    attend    |    4.8    |   0.4099999964237213  |         similar          |        not similar         |
+|     absorb     |   withdraw   |    2.97   |   0.1599999964237213  |       not similar        |        not similar         |
+|     attend     |    arrive    |    6.08   |   0.4399999976158142  |         similar          |          similar           |
++----------------+--------------+-----------+-----------------------+--------------------------+----------------------------+
